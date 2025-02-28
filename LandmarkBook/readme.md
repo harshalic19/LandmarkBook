@@ -17,9 +17,9 @@ Technologies Used
     •    MapKit
     
 Installation
-    1    Clone the repository: git clone https://github.com/your-repo/landmark-list-app.git
-    2    Open the project in Xcode: cd landmark-list-app
-    3    open LandmarkList.xcodeproj
+    1    Clone the repository: git clone https://github.com/harshalic19/LandmarkBook.git
+    2    Open the project in Xcode: cd LandmarkBook
+    3    open LandmarkBook.xcodeproj
     4    Build and run the app on a simulator or a physical device.
     
 Usage
@@ -32,7 +32,7 @@ This project is open-source and available under the MIT License.
 
 Author
     •    Harshali Khushal Chaudhari
-    ◦    GitHub: 
+    ◦    GitHub: https://github.com/harshalic19?tab=repositories
     ◦    LinkedIn: www.linkedin.com/in/harshalik-chaudhari
     
 Contributions
