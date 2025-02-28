@@ -11,6 +11,8 @@ import MapKit
 struct LandmarkDetailView: View {
     
     var landmark: LandmarkModel
+    @State var isLiked: Bool = false
+    @State var numberOfLikes: Int = 0
     
     var body: some View {
         ZStack{
@@ -32,22 +34,36 @@ struct LandmarkDetailView: View {
                 Text(landmark.landmark)
                     .font(.largeTitle).bold()
                     .foregroundColor(.brown)
-                    .padding()
                 
+                Text("\(landmark.country), \(landmark.builtIn)")
+                    .font(.title2)
+                    .foregroundColor(.black)
+            }
+            
+        }
+        
+        HStack {
+            Button {
+                //Like code
+                self.isLiked.toggle()
+                self.numberOfLikes = isLiked ? numberOfLikes + 1 : numberOfLikes - 1
+            } label: {
                 HStack {
-                    Text(landmark.country)
+                    Text("Like")
                         .font(.title).bold()
                         .foregroundColor(.black)
-                        .padding()
-                    Spacer()
-                    Text(landmark.builtIn)
-                        .font(.title)
-                        .foregroundColor(.orange)
-                        .padding()
-                    
+                    Image(isLiked ? "heart_filled" : "heart")
+                        .resizable()
+                        .frame(width: 40, height: 40)
                 }
             }
-        }
+            
+            Spacer()
+            
+            Text(String(numberOfLikes))
+                .font(.title2)
+                .foregroundColor(.black)
+        }.padding(30)
     }
 }
 
